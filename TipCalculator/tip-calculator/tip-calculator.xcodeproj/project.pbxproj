@@ -30,6 +30,7 @@
 		E8DFC0312984A11600456F61 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0302984A11600456F61 /* ThemeFont.swift */; };
 		E8DFC0342984A38600456F61 /* LabelFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0332984A38600456F61 /* LabelFactor.swift */; };
 		E8DFC0362984AAA400456F61 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0352984AAA400456F61 /* UIView+Extension.swift */; };
+		E8DFC0382984B0C900456F61 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0372984B0C900456F61 /* AmountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		E8DFC0302984A11600456F61 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		E8DFC0332984A38600456F61 /* LabelFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactor.swift; sourceTree = "<group>"; };
 		E8DFC0352984AAA400456F61 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E8DFC0372984B0C900456F61 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				E8DFC024298486E100456F61 /* BillInputView.swift */,
 				E8DFC026298486F500456F61 /* TipInputView.swift */,
 				E8DFC0282984870700456F61 /* SplitInputView.swift */,
+				E8DFC0372984B0C900456F61 /* AmountView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DFC0382984B0C900456F61 /* AmountView.swift in Sources */,
 				E8DFC0312984A11600456F61 /* ThemeFont.swift in Sources */,
 				E8DFC0362984AAA400456F61 /* UIView+Extension.swift in Sources */,
 				E8BF0BF529845F01007F86E0 /* CalculatorVC.swift in Sources */,
