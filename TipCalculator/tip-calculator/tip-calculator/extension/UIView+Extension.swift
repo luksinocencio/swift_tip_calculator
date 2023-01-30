@@ -12,4 +12,22 @@ extension UIView {
         backgroundColor = nil
         layer.backgroundColor = backgroundCGColor
     }
+    
+    func addCornerRadius(radius: CGFloat) {
+        layer.masksToBounds = false
+        layer.cornerRadius = radius
+    }
+    
+    /**
+     CACornerMask
+     topLeft: .layerMinXMaxYCorner
+     topRight: .layerMinXMinYCorner
+     bottomLeft: .layerMaxXMinYCorner
+     bottomRight: .layerMinXMinYCorner
+     */
+    
+    func addRoundedCorners(corners: CACornerMask, radius: CGFloat) {
+        layer.cornerRadius = radius
+        layer.maskedCorners = [corners]
+    }
 }
