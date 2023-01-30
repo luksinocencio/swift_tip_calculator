@@ -1,6 +1,9 @@
+import Combine
+import CombineCocoa
 import UIKit
 
 class BillInputView: UIView {
+    // MARK: - Private property(ies).
     
     private lazy var headerView: HeaderView = {
         let view = HeaderView()
@@ -49,10 +52,20 @@ class BillInputView: UIView {
         textField.inputAccessoryView = toolBar
         return textField
     }()
+    private let billSubjects: PassthroughSubject<Double, Never> = .init()
+    private var cancellables = Set<AnyCancellable>()
+    
+    // MARK: - Internal property(ies).
+    
+    var billPublisher: PassthroughSubject<Double, Never> = .init()
+    var valuePublisher: AnyPublisher<Double, Never> {
+        return billSubjects.eraseToAnyPublisher()
+    }
     
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
     
     required init?(coder: NSCoder) { nil }
@@ -85,6 +98,12 @@ class BillInputView: UIView {
             $0.leading.equalTo(currencyDenominationLabel.snp.trailing).offset(16)
             $0.trailing.equalTo(textFieldContainerView.snp.trailing).offset(-16)
         }
+    }
+    
+    private func observe() {
+        textField.textPublisher.sink { text in
+            self.billSubjects.send(text?.doubleValue ?? 0)
+        }.store(in: &cancellables)
     }
     
     @objc func doneButtonTapped() {

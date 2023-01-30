@@ -1,5 +1,6 @@
-import UIKit
+import Combine
 import SnapKit
+import UIKit
 
 class CalculatorVC: UIViewController {
     private let logoView = LogoView()
@@ -23,14 +24,27 @@ class CalculatorVC: UIViewController {
         return stackView
     }()
     
+    private let vm = CalculatorVM()
+    private var cancellables = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = ThemeColor.bg
-        
         layout()
+        bind()
+    }
+    
+    private func bind() {
+        let input = CalculatorVM.Input(
+            billPublisher: billInputView.valuePublisher,
+            tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
+            splitPublisher: Just(5).eraseToAnyPublisher()
+        )
+        
+        let output = vm.transform(input: input)
     }
     
     private func layout() {
+        view.backgroundColor = ThemeColor.bg
         view.addSubview(vStackView)
         
         vStackView.snp.makeConstraints {

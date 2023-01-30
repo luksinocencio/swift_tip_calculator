@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E889613B29875B280087146C /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889613A29875B280087146C /* Tip.swift */; };
 		E889613D29875B670087146C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889613C29875B670087146C /* HeaderView.swift */; };
+		E8896141298763C30087146C /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8896140298763C30087146C /* CalculatorVM.swift */; };
+		E8896143298764F10087146C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8896142298764F10087146C /* Result.swift */; };
+		E889614529876A1D0087146C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889614429876A1D0087146C /* String+Extension.swift */; };
 		E8BF0BF129845F01007F86E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0BF029845F01007F86E0 /* AppDelegate.swift */; };
 		E8BF0BF329845F01007F86E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0BF229845F01007F86E0 /* SceneDelegate.swift */; };
 		E8BF0BF529845F01007F86E0 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0BF429845F01007F86E0 /* CalculatorVC.swift */; };
@@ -55,6 +58,9 @@
 /* Begin PBXFileReference section */
 		E889613A29875B280087146C /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		E889613C29875B670087146C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E8896140298763C30087146C /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
+		E8896142298764F10087146C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E889614429876A1D0087146C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		E8BF0BED29845F01007F86E0 /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8BF0BF029845F01007F86E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8BF0BF229845F01007F86E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +120,29 @@
 			isa = PBXGroup;
 			children = (
 				E889613A29875B280087146C /* Tip.swift */,
+				E8896142298764F10087146C /* Result.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E889613E298762AA0087146C /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				E8BF0BF029845F01007F86E0 /* AppDelegate.swift */,
+				E8BF0BF229845F01007F86E0 /* SceneDelegate.swift */,
+				E8BF0BF929845F02007F86E0 /* Assets.xcassets */,
+				E8BF0BFB29845F02007F86E0 /* LaunchScreen.storyboard */,
+				E8BF0BFE29845F02007F86E0 /* Info.plist */,
+			);
+			name = "supporting files";
+			sourceTree = "<group>";
+		};
+		E889613F298763B50087146C /* view model */ = {
+			isa = PBXGroup;
+			children = (
+				E8896140298763C30087146C /* CalculatorVM.swift */,
+			);
+			path = "view model";
 			sourceTree = "<group>";
 		};
 		E8BF0BE429845F01007F86E0 = {
@@ -142,17 +169,14 @@
 		E8BF0BEF29845F01007F86E0 /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E889613F298763B50087146C /* view model */,
 				E889613929875B200087146C /* model */,
 				E8DFC0322984A37800456F61 /* factory */,
 				E8DFC02D29849F9F00456F61 /* config */,
 				E8DFC02A29849DD100456F61 /* extension */,
 				E8DFC01F2984864700456F61 /* view */,
-				E8BF0BF029845F01007F86E0 /* AppDelegate.swift */,
-				E8BF0BF229845F01007F86E0 /* SceneDelegate.swift */,
+				E889613E298762AA0087146C /* supporting files */,
 				E8BF0BF429845F01007F86E0 /* CalculatorVC.swift */,
-				E8BF0BF929845F02007F86E0 /* Assets.xcassets */,
-				E8BF0BFB29845F02007F86E0 /* LaunchScreen.storyboard */,
-				E8BF0BFE29845F02007F86E0 /* Info.plist */,
 			);
 			path = "tip-calculator";
 			sourceTree = "<group>";
@@ -200,6 +224,7 @@
 			children = (
 				E8DFC02B29849DE100456F61 /* UIColor+Extension.swift */,
 				E8DFC0352984AAA400456F61 /* UIView+Extension.swift */,
+				E889614429876A1D0087146C /* String+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -367,6 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8896143298764F10087146C /* Result.swift in Sources */,
+				E8896141298763C30087146C /* CalculatorVM.swift in Sources */,
 				E8DFC0382984B0C900456F61 /* AmountView.swift in Sources */,
 				E8DFC0312984A11600456F61 /* ThemeFont.swift in Sources */,
 				E8DFC0362984AAA400456F61 /* UIView+Extension.swift in Sources */,
@@ -378,6 +405,7 @@
 				E8BF0BF129845F01007F86E0 /* AppDelegate.swift in Sources */,
 				E8DFC0342984A38600456F61 /* LabelFactor.swift in Sources */,
 				E8BF0BF329845F01007F86E0 /* SceneDelegate.swift in Sources */,
+				E889614529876A1D0087146C /* String+Extension.swift in Sources */,
 				E8DFC0292984870700456F61 /* SplitInputView.swift in Sources */,
 				E889613B29875B280087146C /* Tip.swift in Sources */,
 				E8DFC027298486F500456F61 /* TipInputView.swift in Sources */,
