@@ -36,6 +36,9 @@
 		E8DFC0342984A38600456F61 /* LabelFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0332984A38600456F61 /* LabelFactor.swift */; };
 		E8DFC0362984AAA400456F61 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0352984AAA400456F61 /* UIView+Extension.swift */; };
 		E8DFC0382984B0C900456F61 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFC0372984B0C900456F61 /* AmountView.swift */; };
+		E8F22E172995ADA800789CEC /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F22E162995ADA800789CEC /* Int+Extension.swift */; };
+		E8F22E192995B8DF00789CEC /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F22E182995B8DF00789CEC /* Double+Extension.swift */; };
+		E8F4F9D72990AE5A0069792C /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4F9D62990AE5A0069792C /* UIResponder+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		E8DFC0332984A38600456F61 /* LabelFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactor.swift; sourceTree = "<group>"; };
 		E8DFC0352984AAA400456F61 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E8DFC0372984B0C900456F61 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		E8F22E162995ADA800789CEC /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		E8F22E182995B8DF00789CEC /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		E8F4F9D62990AE5A0069792C /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,9 @@
 				E8DFC02B29849DE100456F61 /* UIColor+Extension.swift */,
 				E8DFC0352984AAA400456F61 /* UIView+Extension.swift */,
 				E889614429876A1D0087146C /* String+Extension.swift */,
+				E8F4F9D62990AE5A0069792C /* UIResponder+Extension.swift */,
+				E8F22E162995ADA800789CEC /* Int+Extension.swift */,
+				E8F22E182995B8DF00789CEC /* Double+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -394,6 +403,8 @@
 			files = (
 				E8896143298764F10087146C /* Result.swift in Sources */,
 				E8896141298763C30087146C /* CalculatorVM.swift in Sources */,
+				E8F4F9D72990AE5A0069792C /* UIResponder+Extension.swift in Sources */,
+				E8F22E172995ADA800789CEC /* Int+Extension.swift in Sources */,
 				E8DFC0382984B0C900456F61 /* AmountView.swift in Sources */,
 				E8DFC0312984A11600456F61 /* ThemeFont.swift in Sources */,
 				E8DFC0362984AAA400456F61 /* UIView+Extension.swift in Sources */,
@@ -406,6 +417,7 @@
 				E8DFC0342984A38600456F61 /* LabelFactor.swift in Sources */,
 				E8BF0BF329845F01007F86E0 /* SceneDelegate.swift in Sources */,
 				E889614529876A1D0087146C /* String+Extension.swift in Sources */,
+				E8F22E192995B8DF00789CEC /* Double+Extension.swift in Sources */,
 				E8DFC0292984870700456F61 /* SplitInputView.swift in Sources */,
 				E889613B29875B280087146C /* Tip.swift in Sources */,
 				E8DFC027298486F500456F61 /* TipInputView.swift in Sources */,
