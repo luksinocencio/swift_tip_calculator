@@ -90,6 +90,10 @@ class TipInputView: UIView {
     
     required init?(coder: NSCoder) { nil }
     
+    func reset() {
+        tipSubject.send(.none)
+    }
+    
     private func layout() {
         [headerView, buttonVStackView].forEach(addSubview(_:))
         

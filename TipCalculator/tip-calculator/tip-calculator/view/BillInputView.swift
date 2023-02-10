@@ -73,6 +73,11 @@ class BillInputView: UIView {
     
     required init?(coder: NSCoder) { nil }
     
+    func reset() {
+        textField.text = nil
+        billSubjects.send(0)
+    }
+    
     private func layout() {
         [headerView, textFieldContainerView].forEach(addSubview(_:))
         
