@@ -94,7 +94,7 @@ class CalculatorVC: UIViewController {
         }.store(in: &cancellables)
         
         logoViewTapPublisher.sink { [unowned self] value in
-            print("hey reset the form please")
+            print("reset calculator called")
         }.store(in: &cancellables)
     }
     
