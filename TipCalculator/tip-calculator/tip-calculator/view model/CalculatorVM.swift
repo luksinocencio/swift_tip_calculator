@@ -11,10 +11,15 @@ class CalculatorVM {
     
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
-        let resultCalculatorPublisher: AnyPublisher<Void, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     private var cancellables = Set<AnyCancellable>()
+    private var audioPlayerService: AudioPlayerService
+    
+    init(audioPlayerService: AudioPlayerService = DefaultAudioPlayer()) {
+        self.audioPlayerService = audioPlayerService
+    }
     
     func transform(input: Input) -> Output {
         let updateViewPublisher = Publishers.CombineLatest3(
@@ -35,9 +40,15 @@ class CalculatorVM {
             return Just(result)
         }.eraseToAnyPublisher()
         
-        let resultCalculatorPublisher = input.logoViewTapPublisher
+        let resultCalculatorPublisher = input
+            .logoViewTapPublisher
+            .handleEvents(receiveOutput: { [unowned self] in
+                audioPlayerService.playSound()
+            }).flatMap {
+                return Just($0)
+            }.eraseToAnyPublisher()
         
-        return Output(updateViewPublisher: updateViewPublisher, resultCalculatorPublisher: resultCalculatorPublisher)
+        return Output(updateViewPublisher: updateViewPublisher, resetCalculatorPublisher: resultCalculatorPublisher)
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {

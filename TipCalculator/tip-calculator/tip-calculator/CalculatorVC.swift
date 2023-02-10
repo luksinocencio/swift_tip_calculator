@@ -65,6 +65,10 @@ class CalculatorVC: UIViewController {
         output.updateViewPublisher.sink { [unowned self] result in
             resultView.configure(result: result)
         }.store(in: &cancellables)
+        
+        output.resetCalculatorPublisher.sink { _ in
+            print("hey, reset the form please!")
+        }.store(in: &cancellables)
     }
     
     func observe() {
@@ -73,7 +77,7 @@ class CalculatorVC: UIViewController {
         }.store(in: &cancellables)
         
         logoViewTapPublisher.sink { [unowned self] value in
-            print("logo view taooed")
+            print("hey reset the form please")
         }.store(in: &cancellables)
     }
     
